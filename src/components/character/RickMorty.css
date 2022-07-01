@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  background-color: rgb(84, 83, 83);
+  color: rgb(205, 204, 203);
+  min-width: 50%;
+  height: 200px;
+  border-radius: 20px;
+  margin: 10px;
+  overflow: hidden;
+}
+/* .list-items {
+} */
+.f, .last-known, .last-seen{
+  color: rgb(194, 194, 194);
+  padding: 10px;
+  margin-left: 10px;
+}
+img{
+  /* border-radius: 20px 0  0 20px; */
+  max-width: 200px;
+
+}
