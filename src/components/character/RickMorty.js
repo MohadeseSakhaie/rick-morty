@@ -1,22 +1,20 @@
 import './RickMorty.css'
 
-const RickMortyList = ({ addCharacterName, addCharacterLoc, addCharacterEpi }) => {
+const RickMorty = ({ addCharacterName}) => {
 
     return (<div className="list">
         <div>
-            <img src={require('./625.jpg')} />
-            
+            <img src={`${addCharacterName.image}`} />
         </div>
         <div className='f'>
-            <label>name:</label><div className='name'>{addCharacterName}</div>
-            <label>state:</label><div className='state'></div>
-
-            <label>Last known location:</label><div className='last-known'>{addCharacterLoc}</div>
-            <label>First seen in:</label><div className='last-seen'>{addCharacterEpi}</div>
+            <label>name:</label><div className='name'>{addCharacterName.name}</div>
+            <label>state:</label><div className='state'>{addCharacterName.status}</div>
+            <label>Last known location:</label><div className='last-known'>{addCharacterName.location.name}</div>
+            <label>First seen in:</label><a href={`${addCharacterName.episode[0]}`}>{addCharacterName.episode[0]}</a>
         </div>
 
     </div>);
 }
 
-export default RickMortyList;
-{/* //<img src={require(item.image)} /> */ }
+export default RickMorty;
+{/* <div className='first-seen'></div> */}

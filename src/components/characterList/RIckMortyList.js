@@ -1,8 +1,12 @@
 import RickMorty from '../character/RickMorty'
 import './RickMortyList.css'
 
-const RickMortyList = ({ addCharacterName, addCharacterLoc, addCharacterEpi }) => {
-    return (addCharacterName.map((item) => (<RickMorty  addCharacterName={item} />)) 
+const RickMortyList = ({ addCharacterName }) => {
+
+    return (
+        <div>
+            {addCharacterName.map((item) => < RickMorty addCharacterName={item}/>)}
+        </div>
     )
 }
 

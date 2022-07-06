@@ -1,8 +1,9 @@
-import React, { Component, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import './App.css'
 // import DataRandM from './DataRandM'
 import RickMortyList from "./components/characterList/RIckMortyList"
-import RickMorty from './components/character/RickMorty'
+
+// import RickMorty from './components/character/RickMorty'
 
 // import { Route, Link, BrowserRouter as Router, BrowserRouter } from "react-router-dom"
 
@@ -13,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const sendRequest = async () => {
-      const responce = await fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5,6').then(res => res.json());
+      const responce = await fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,10,12,15,17,50').then(res => res.json());
       const responceLocation = await fetch('https://rickandmortyapi.com/api/location/1,2,3,4,5,6').then(res => res.json());
       const responceEpisode = await fetch('https://rickandmortyapi.com/api/episode/1,2,3,4,5,6').then(res => res.json());
 
@@ -24,9 +25,7 @@ function App() {
     sendRequest()
   }, [])
 
-  // console.log(responseEpi)
-
-  const addCharacterName = response !== null ? response.map((item) => (item.name)) : null;
+  const addCharacterName = response !== null && response.map((item) => (item));
   const addCharacterLoc = responseLoc !== null && responseLoc.map((item) => (item.name));
   const addCharacterEpi = responseEpi !== null && responseEpi.map((item) => (item.name));
 
@@ -34,10 +33,11 @@ function App() {
   return (
     <div className="container">
       <h1>The Rick and Morty characters</h1>
-      < RickMortyList
+      <RickMortyList
         addCharacterName={addCharacterName}
         addCharacterLoc={addCharacterLoc}
-        addCharacterEpi={addCharacterEpi} />
+        addCharacterEpi={addCharacterEpi}
+      />
     </div>
   )
 }
