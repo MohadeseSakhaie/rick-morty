@@ -1,0 +1,11 @@
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 110px;
+  float: left;
+  grid-area: "main";
+  grid-column-start: 2;
+  grid-column-end: 3;
+  flex-wrap: wrap;
+}

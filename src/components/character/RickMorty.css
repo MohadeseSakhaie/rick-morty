@@ -1,22 +1,61 @@
 .list {
-  display: flex;
-  background-color: rgb(84, 83, 83);
-  color: rgb(205, 204, 203);
-  min-width: 50%;
-  height: 200px;
+  box-sizing: border-box;
+  color: rgb(30, 30, 30);
   border-radius: 20px;
-  margin: 10px;
+  margin: 6px;
+  height: 420px;
+  width: 200px;
+  background-color: rgb(199, 198, 198);
   overflow: hidden;
+  /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-/* .list-items {
-} */
-.f{
-  color: rgb(194, 194, 194);
-  padding: 10px;
+
+.f {
+  color: rgb(30, 30, 30);
+  padding: 0 6px;
   margin-left: 10px;
 }
-img{
-  /* border-radius: 20px 0  0 20px; */
-  max-width: 200px;
-
+img {
+  max-width: 205px;
+  height: auto;
+}
+.name {
+  font-size: 1.2rem;
+  font-weight: 650;
+}
+.tag-a a {
+  text-decoration: none;
+  color: rgb(87, 87, 87);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+label {
+  font-weight: 640;
+  display: block;
+}
+.alive-state {
+  background-image: url(../../../images/heartbeat.png);
+  scale: 0.4;
+  width: 60px;
+  height: 60px;
+}
+.dead-state {
+  background-image: url(../../../images/game_skull.png);
+  scale: 0.4;
+  width: 60px;
+  height: 60px;
+}
+.unknown-state {
+  background-image: url(../../../images/question-mark.png);
+  scale: 0.4;
+  width: 60px;
+  height: 60px;
+}
+.status-text {
+  padding-top: 59px;
+  padding-left: 10px;
+  scale: 1.1;
+  font-weight: 700;
+  font-size: large;
 }
