@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import RickMortyList from "./components/characterList/RickMortyList";
 import SideSearch from "./components/SideSearch/SideSearch";
+// import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [response, setResponse] = useState([]);
@@ -19,11 +20,15 @@ function App() {
 
   const addCharacterName = response !== null && response.map((item) => item);
 
+  const pointHandler = () => {};
   return (
     <div className="container">
       <h1>The Rick and Morty characters</h1>
       <SideSearch />
-      <RickMortyList addCharacterName={addCharacterName} />
+      <RickMortyList
+        addCharacterName={addCharacterName}
+        onClick={() => pointHandler()}
+      />
     </div>
   );
 }

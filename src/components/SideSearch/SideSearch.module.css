@@ -10,5 +10,8 @@
   margin-left: 20px;
 }
 input {
-  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  /* width: 100px; */
+  overflow: hidden;
 }
