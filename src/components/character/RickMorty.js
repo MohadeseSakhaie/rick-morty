@@ -7,7 +7,7 @@ const RickMorty = ({ addCharacterName }) => {
   return (
     <div className="list">
       <div>
-        <img src={addCharacterName.image} />
+        <img alt="character-img" src={addCharacterName.image} />
       </div>
       <div>
         <div>
