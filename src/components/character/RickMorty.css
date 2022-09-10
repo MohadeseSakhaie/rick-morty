@@ -34,24 +34,47 @@ label {
   font-weight: 640;
   display: block;
 }
-.alive-state {
-  background-image: url(../../../images/heartbeat.png);
-  scale: 0.4;
+/* .alive-state {
   width: 60px;
   height: 60px;
 }
 .dead-state {
-  background-image: url(../../../images/game_skull.png);
+  width: 60px;
+  height: 60px;
+}
+.unknown-state {
+  width: 60px;
+  height: 60px;
+}
+.status-text {
+  padding: 25px;
+  scale: 1.1;
+} */
+.species {
+  padding: 0 17px;
+  font-size: small;
+}
+.state {
+  /* background-image: url(./images/Alive.png); */
+  /* scale: 0.4; */
+  z-index: 1;
+  padding: 6px 18px;
+  padding-bottom: 0;
+  width: 20px;
+  height: 20px;
+}
+/* .dead-state {
+  background-image: url(./images/game_skull.png);
   scale: 0.4;
   width: 60px;
   height: 60px;
 }
 .unknown-state {
-  background-image: url(../../../images/question-mark.png);
+  background-image: url(./images/question-mark.png);
   scale: 0.4;
   width: 60px;
   height: 60px;
-}
+} */
 .status-text {
   padding-top: 59px;
   padding-left: 5px;

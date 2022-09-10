@@ -10,8 +10,14 @@
   margin-left: 20px;
 }
 input {
-  min-width: 100px;
-  max-width: 100px;
-  /* width: 100px; */
-  overflow: hidden;
+  width: 100%;
+}
+select,
+option {
+  width: 100%;
+}
+select,
+option {
+  display: block;
+  padding-right: 100px;
 }

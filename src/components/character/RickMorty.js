@@ -1,21 +1,30 @@
-import styles from "./RickMorty.css";
+import "./RickMorty.css";
+import Alive from "./images/Alive.png";
+import Dead from "./images/Dead.png";
+import unknown from "./images/unknown.png";
 
 const RickMorty = ({ addCharacterName }) => {
   return (
     <div className="list">
       <div>
-        <img src={`${addCharacterName.image}`} />
+        <img src={addCharacterName.image} />
       </div>
-      <div
-        className={
-          `${addCharacterName.status}` === "unknown"
-            ? "unknown-state"
-            : `${addCharacterName.status}` === "Alive"
-            ? "alive-state"
-            : "dead-state"
-        }
-      >
-        <div className="status-text">{addCharacterName.status}</div>
+      <div>
+        <div>
+          <img
+            alt=""
+            className="state"
+            src={
+              addCharacterName.status === "Alive"
+                ? Alive
+                : addCharacterName.status === "unknown"
+                ? unknown
+                : Dead
+            }
+          />
+        </div>
+        {/* <div className="species">{addCharacterName.status}</div> */}
+        <div className="species">{addCharacterName.species}</div>
       </div>
 
       <div className="f">
@@ -40,3 +49,19 @@ const RickMorty = ({ addCharacterName }) => {
 };
 
 export default RickMorty;
+
+// <div
+//   className={
+//     `${addCharacterName.status}` === "Alive"
+//       ? "alive-state"
+//       : `${addCharacterName.status}` === "unknown"
+//       ? "unknown-state"
+//       : "dead-state"
+//   }
+// ></div>
+
+//   <div className="image-status">
+//   addCharacterName.status === "Alive"&&
+//   <img src="./images/heartbeat.png" />
+//   {/* <img src="./images/game_skull.png" /> */}
+// </div>
