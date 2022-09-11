@@ -7,7 +7,11 @@ const RickMorty = ({ addCharacterName }) => {
   return (
     <div className="list">
       <div>
-        <img alt="character-img" src={addCharacterName.image} />
+        <img
+          className="main-img"
+          alt="character-img"
+          src={addCharacterName.image}
+        />
       </div>
       <div>
         <div>
@@ -37,8 +41,13 @@ const RickMorty = ({ addCharacterName }) => {
             {addCharacterName.location.name}
           </div>
           <label>First seen in:</label>
-          <div className="tag-a">
-            <a href={`${addCharacterName.episode[0]}`}>
+          <div>
+            <a
+              className="tag-a"
+              numberOfLines={0}
+              ellipsizeMode="tail"
+              href={`${addCharacterName.episode[0]}`}
+            >
               {addCharacterName.episode[0]}
             </a>
           </div>
@@ -49,19 +58,3 @@ const RickMorty = ({ addCharacterName }) => {
 };
 
 export default RickMorty;
-
-// <div
-//   className={
-//     `${addCharacterName.status}` === "Alive"
-//       ? "alive-state"
-//       : `${addCharacterName.status}` === "unknown"
-//       ? "unknown-state"
-//       : "dead-state"
-//   }
-// ></div>
-
-//   <div className="image-status">
-//   addCharacterName.status === "Alive"&&
-//   <img src="./images/heartbeat.png" />
-//   {/* <img src="./images/game_skull.png" /> */}
-// </div>

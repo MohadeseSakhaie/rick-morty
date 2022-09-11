@@ -2,15 +2,19 @@
   box-sizing: border-box;
   color: rgb(30, 30, 30);
   border-radius: 20px;
-  margin: 6px;
+  margin: 8px;
   height: 420px;
   width: 200px;
   background-color: rgb(199, 198, 198);
   overflow: hidden;
   /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: transform 0.5s ease;
 }
-
+.list:hover {
+  box-shadow: rgba(21, 87, 153, 0.2) 0px 8px 24px;
+  transform: scale(1.04);
+}
 .f {
   color: rgb(30, 30, 30);
   padding: 0 6px;
@@ -20,16 +24,30 @@ img {
   max-width: 205px;
   height: auto;
 }
+/* .main-img {
+   background-image: linear-gradient(
+    to top,
+    rgba(239, 239, 239, 255),
+    rgba(239, 239, 239, 0)
+  ); 
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    transparent 110%
+  );
+} */
 .name {
   font-size: 1.2rem;
   font-weight: 650;
 }
-.tag-a a {
+.tag-a {
   text-decoration: none;
   color: rgb(87, 87, 87);
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
+
 label {
   font-weight: 640;
   display: block;
