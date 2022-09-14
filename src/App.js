@@ -3,7 +3,6 @@ import "./App.css";
 import axios from "axios";
 import RickMortyList from "./components/characterList/RickMortyList";
 import SideSearch from "./components/SideSearch/SideSearch";
-// import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [response, setResponse] = useState([]);
@@ -14,20 +13,17 @@ function App() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `https://rickandmortyapi.com/api/character/?name=${query}`
-          // && ?status=${status}`
+          `https://rickandmortyapi.com/api/character/?name=${query}&status=${status}`
         );
         setResponse(data.results);
       } catch (error) {
-        console.error(error);
+        // console.error(error);
       }
     };
-
     fetchData();
-  }, [query]);
+  }, [query, status]);
 
   const addCharacterName = response !== null && response.map((item) => item);
-
   return (
     <div className="container">
       <h1>The Rick and Morty characters</h1>

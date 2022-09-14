@@ -16,7 +16,7 @@ const RickMorty = ({ addCharacterName }) => {
       <div>
         <div>
           <img
-            alt=""
+            alt="status"
             className="state"
             src={
               addCharacterName.status === "Alive"
@@ -27,7 +27,6 @@ const RickMorty = ({ addCharacterName }) => {
             }
           />
         </div>
-        {/* <div className="species">{addCharacterName.status}</div> */}
         <div className="species">{addCharacterName.species}</div>
       </div>
 
@@ -42,12 +41,7 @@ const RickMorty = ({ addCharacterName }) => {
           </div>
           <label>First seen in:</label>
           <div>
-            <a
-              className="tag-a"
-              numberOfLines={0}
-              ellipsizeMode="tail"
-              href={`${addCharacterName.episode[0]}`}
-            >
+            <a className="tag-a" href={`${addCharacterName.episode[0]}`}>
               {addCharacterName.episode[0]}
             </a>
           </div>

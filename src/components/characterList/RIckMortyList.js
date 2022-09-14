@@ -6,11 +6,7 @@ const RickMortyList = ({ addCharacterName }) => {
   return (
     <div className="item">
       {addCharacterName.map((item) => (
-        <RickMorty
-          addCharacterName={item}
-          key={uuidv4()}
-          // onClick={() => pointHandler(item.key)}
-        />
+        <RickMorty addCharacterName={item} key={uuidv4()} />
       ))}
     </div>
   );
