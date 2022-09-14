@@ -12,12 +12,13 @@
 input {
   width: 100%;
 }
-select,
-option {
+select {
+  display: block;
   width: 100%;
+  cursor: pointer;
 }
-select,
+/* select,
 option {
   display: block;
   padding-right: 100px;
-}
+} */

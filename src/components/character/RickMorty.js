@@ -1,23 +1,19 @@
-import "./RickMorty.css";
+import style from "./RickMorty.module.css";
 import Alive from "./images/Alive.png";
 import Dead from "./images/Dead.png";
 import unknown from "./images/unknown.png";
 
 const RickMorty = ({ addCharacterName }) => {
   return (
-    <div className="list">
+    <div className={style.list}>
       <div>
-        <img
-          className="main-img"
-          alt="character-img"
-          src={addCharacterName.image}
-        />
+        <img alt="character-img" src={addCharacterName.image} />
       </div>
       <div>
         <div>
           <img
             alt="status"
-            className="state"
+            className={style.state}
             src={
               addCharacterName.status === "Alive"
                 ? Alive
@@ -27,21 +23,21 @@ const RickMorty = ({ addCharacterName }) => {
             }
           />
         </div>
-        <div className="species">{addCharacterName.species}</div>
+        <div className={style.species}>{addCharacterName.species}</div>
       </div>
 
-      <div className="f">
-        <div className="name" title={addCharacterName.name}>
+      <div className={style.f}>
+        <div className={style.name} title={addCharacterName.name}>
           {addCharacterName.name}
         </div>
-        <div className="hover-class">
+        <div className={style.hover}>
           <label>Last known location:</label>
-          <div className="last-known" title={addCharacterName.location.name}>
+          <div title={addCharacterName.location.name}>
             {addCharacterName.location.name}
           </div>
           <label>First seen in:</label>
           <div>
-            <a className="tag-a" href={`${addCharacterName.episode[0]}`}>
+            <a className={style.taga} href={`${addCharacterName.episode[0]}`}>
               {addCharacterName.episode[0]}
             </a>
           </div>

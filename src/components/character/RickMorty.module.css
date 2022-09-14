@@ -24,23 +24,12 @@ img {
   max-width: 205px;
   height: auto;
 }
-/* .main-img {
-   background-image: linear-gradient(
-    to top,
-    rgba(239, 239, 239, 255),
-    rgba(239, 239, 239, 0)
-  ); 
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 50%,
-    transparent 110%
-  );
-} */
+
 .name {
   font-size: 1.2rem;
   font-weight: 650;
 }
-.tag-a {
+.taga {
   text-decoration: none;
   color: rgb(87, 87, 87);
   white-space: nowrap;
@@ -52,47 +41,19 @@ label {
   font-weight: 640;
   display: block;
 }
-/* .alive-state {
-  width: 60px;
-  height: 60px;
-}
-.dead-state {
-  width: 60px;
-  height: 60px;
-}
-.unknown-state {
-  width: 60px;
-  height: 60px;
-}
-.status-text {
-  padding: 25px;
-  scale: 1.1;
-} */
+
 .species {
   padding: 0 17px;
   font-size: small;
 }
 .state {
-  /* background-image: url(./images/Alive.png); */
-  /* scale: 0.4; */
   z-index: 1;
   padding: 6px 18px;
   padding-bottom: 0;
   width: 20px;
   height: 20px;
 }
-/* .dead-state {
-  background-image: url(./images/game_skull.png);
-  scale: 0.4;
-  width: 60px;
-  height: 60px;
-}
-.unknown-state {
-  background-image: url(./images/question-mark.png);
-  scale: 0.4;
-  width: 60px;
-  height: 60px;
-} */
+
 .status-text {
   padding-top: 59px;
   padding-left: 5px;
