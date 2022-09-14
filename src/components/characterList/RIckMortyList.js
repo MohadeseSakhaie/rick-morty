@@ -1,7 +1,4 @@
 import RickMorty from "../character/RickMorty.js";
-
-// import RickMorty from "../character/RickMorty";
-// import "./RickMortyList.css";
 import styles from "./RickMortyList.module.css";
 import { v4 as uuidv4 } from "uuid";
 

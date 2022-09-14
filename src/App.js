@@ -17,7 +17,7 @@ function App() {
         );
         setResponse(data.results);
       } catch (error) {
-        // console.error(error);
+        console.error(error);
       }
     };
     fetchData();
