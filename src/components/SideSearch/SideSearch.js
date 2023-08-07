@@ -6,6 +6,7 @@ const SideSearch = ({ query, setQuery, status, setStatus }) => {
       <div>Filter By:</div>
       <label>
         Name:
+      </label>
         <input
           className="input"
           type="search"
@@ -13,7 +14,7 @@ const SideSearch = ({ query, setQuery, status, setStatus }) => {
           onChange={(e) => setQuery(e.target.value)}
           value={query}
         />
-      </label>
+      
       <label>
         Status:
         <select

@@ -3,17 +3,20 @@ import "./App.css";
 import axios from "axios";
 import RickMortyList from "./components/characterList/RickMortyList";
 import SideSearch from "./components/SideSearch/SideSearch";
+import useDebounce from "./hooks/useDebounce";
 
 function App() {
   const [response, setResponse] = useState([]);
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("");
+  const debouncedSearchValue = useDebounce (query, 1000);
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `https://rickandmortyapi.com/api/character/?name=${query}&status=${status}`
+          `https://rickandmortyapi.com/api/character/?name=${debouncedSearchValue}&status=${status}`
         );
         setResponse(data.results);
       } catch (error) {
@@ -21,7 +24,7 @@ function App() {
       }
     };
     fetchData();
-  }, [query, status]);
+  }, [debouncedSearchValue, status]);
 
   const addCharacterName = response !== null && response.map((item) => item);
   return (
